@@ -16,8 +16,7 @@ dataMap = {
 
 # Default config file and profile
 configfile = os.getenv('CONFIGFILE')
-config = oci.config.from_file(file_location=configfile,
-                              profile_name='Default')
+config = oci.config.from_file(file_location=configfile)
 usage_api_client = oci.usage_api.UsageapiClient(config)
 
 tenant_id = config['tenancy']
