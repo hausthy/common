@@ -28,7 +28,7 @@ if __name__ == '__main__':
         this_month_start = datetime(now.year, now.month, 1)
         dayTotal = calendar.monthrange(now.year, now.month)[1]
         # this_month_end = datetime(now.year, now.month, dayTotal)
-        this_month_end = datetime(now.year, now.month, now.day+1)
+        this_month_end = datetime(now.year, now.month, now.day, 23, 59, 59)
         dtb = this_month_start.strftime('%Y-%m-%d')
         dte = this_month_end.strftime('%Y-%m-%d')
         usage_request = RequestSummarizedUsagesDetails(tenant_id=tenant_id,
