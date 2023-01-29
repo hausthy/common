@@ -28,7 +28,7 @@ function main() {
         apk add nodejs-current
 
         if [ ! -f "/custom/scripts/package.json" ]; then
-            cp -rf /scripts/package.json /custom/scripts/
+            cp -rf /scripts/package.json /custom/scripts/package.json
         fi
         echo "npm install 安装最新依赖"
         npm install --prefix /custom/scripts/
