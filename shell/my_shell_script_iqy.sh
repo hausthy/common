@@ -5,6 +5,20 @@ procFile="/scripts/docker/proc_file.sh"
 downloadstatus=0
 hh=$(date '+%H')
 
+#初始化python3环境
+function initPythonEnv() {
+    if [ ! -f "/root/python.lock" ]; then
+        echo "开始安装运行需要的python环境及依赖..."
+        sed -i 's#dl-cdn.alpinelinux.org#mirrors.aliyun.com#g' /etc/apk/repositories
+        apk update
+        apk upgrade
+        apk add --update python3-dev py3-pip py3-cryptography py3-numpy py-pillow
+        echo '' >/root/python.lock
+    else
+        echo "python已经更新到最新版，跳过..."
+    fi
+}
+
 #主入口
 function main() {
 
@@ -12,13 +26,13 @@ function main() {
         echo "开始更新nodejs..."
         sed -i 's#dl-cdn.alpinelinux.org#mirrors.aliyun.com#g' /etc/apk/repositories
         apk add nodejs-current
-        
-        if [ ! -f "/scripts/package.json" ]; then
-            cp -rf /scripts/docker/package.json /scripts/
-        fi
 
+        if [ ! -f "/custom/scripts/package.json" ]; then
+            cp -rf /scripts/package.json /custom/scripts/
+        fi
         echo "npm install 安装最新依赖"
-        npm install --prefix /scripts
+        npm install --prefix /custom/scripts/
+
         echo '' >/root/nodejs.lock
     else
         echo "nodejs已经更新到最新版，跳过..."
