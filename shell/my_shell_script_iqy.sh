@@ -24,7 +24,7 @@ function main() {
 
     if [ $JD_USER_NAME == "hausthy" ]; then
         # initTelethon
-        echo ''
+        echo $hh
     fi
 
     if [ $JD_USER_NAME == "gd_hausthy" ]; then
