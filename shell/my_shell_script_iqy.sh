@@ -19,11 +19,12 @@ function main() {
 
     #开始安装运行需要的python环境
     initPythonEnv
-    
+
     echo -e "\n#自定义脚本Task" >>${mergedListFile}
-    
+
     if [ $JD_USER_NAME == "hausthy" ]; then
         # initTelethon
+        echo ''
     fi
 
     if [ $JD_USER_NAME == "gd_hausthy" ]; then
@@ -32,7 +33,7 @@ function main() {
         echo -e "\n#爱奇艺签到" >>${mergedListFile}
         echo -e "${random_m} 8 * * * node /custom/scripts/iQIYI.js >> /scripts/logs/iQIYI.log 2>&1" >>${mergedListFile}
     fi
-    
+
     ##格式化日期输出格式
     sed -i 's#\(|ts\|| ts\) >>#|ts \"%Y-%m-%d %H:%M:%S\" >>#g' ${procFile}
     echo -e "sed -i 's#|ts >>#|ts \"%Y-%m-%d %H:%M:%S\" >>#g' ${mergedListFile}" >>${procFile}
