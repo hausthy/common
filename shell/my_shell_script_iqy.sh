@@ -12,6 +12,13 @@ function main() {
         echo "开始更新nodejs..."
         sed -i 's#dl-cdn.alpinelinux.org#mirrors.aliyun.com#g' /etc/apk/repositories
         apk add nodejs-current
+        
+        if [ ! -f "/scripts/package.json" ]; then
+            cp -rf /scripts/docker/package.json /scripts/
+        fi
+
+        echo "npm install 安装最新依赖"
+        npm install --prefix /scripts
         echo '' >/root/nodejs.lock
     else
         echo "nodejs已经更新到最新版，跳过..."
@@ -21,7 +28,7 @@ function main() {
     initPythonEnv
 
     mkdir -p /custom/
-    
+
     echo -e "\n#自定义脚本Task" >>${mergedListFile}
 
     ## 下载爱奇艺
