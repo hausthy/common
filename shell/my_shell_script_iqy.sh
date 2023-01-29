@@ -39,7 +39,7 @@ function main() {
     fi
 
     #开始安装运行需要的python环境
-    initPythonEnv
+    # initPythonEnv
 
     mkdir -p /custom/
 
