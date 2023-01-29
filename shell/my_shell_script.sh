@@ -598,25 +598,25 @@ function main() {
     echo -e "\n#自定义脚本Task" >>${mergedListFile}
 
     ##下载京喜Token格式化文件
-    wget https://gitee.com/hausthy/remote/raw/master/docker/jdJxncTokens.js -O /scripts/jdJxncTokens.js
+    #wget https://gitee.com/hausthy/remote/raw/master/docker/jdJxncTokens.js -O /scripts/jdJxncTokens.js
 
     ##下载宠汪汪验证文件
-    wget https://gitee.com/hausthy/remote/raw/master/docker/jd_joy_reward_pure.js -O /custom/scripts/jd_joy_reward_pure.js
+    #wget https://gitee.com/hausthy/remote/raw/master/docker/jd_joy_reward_pure.js -O /custom/scripts/jd_joy_reward_pure.js
 
     ##下载京豆兑换为喜豆文件
     wget https://gitee.com/hausthy/remote/raw/master/docker/jd_exchangejxbeans.js -O /custom/scripts/jd_exchangejxbeans.js
 
     ##下载tsc转换脚本
     mkdir -p /custom/shell
-    wget https://gitee.com/hausthy/remote/raw/master/docker/shell/ts_js.sh -O /custom/shell/ts_js.sh
+    wget https://git.itsapi.top/https://raw.githubusercontent.com/hausthy/common/master/shell/ts.sh -O /custom/shell/ts_js.sh
     chmod +x /custom/shell/ts_js.sh
 
     ##下载whzsyx脚本
-    wget https://gitee.com/hausthy/remote/raw/master/docker/jdWskey.js -O /custom/scripts/jdWskey.js
-    wget https://gitee.com/hausthy/remote/raw/master/docker/jd_ck_exchange.js -O /custom/scripts/jd_ck_exchange.js
-    wget https://gitee.com/hausthy/remote/raw/master/docker/jd_cfd_pearl_ex.js -O /custom/scripts/jd_cfd_pearl_ex.js
-    wget https://gitee.com/hausthy/remote/raw/master/docker/jd_cfdhbtx.js -O /custom/scripts/jd_cfdhctx.js
-    wget https://gitee.com/hausthy/remote/raw/master/docker/jd_applecoupons.js -O /custom/scripts/jd_applecoupons.js
+    # wget https://gitee.com/hausthy/remote/raw/master/docker/jdWskey.js -O /custom/scripts/jdWskey.js
+    # wget https://gitee.com/hausthy/remote/raw/master/docker/jd_ck_exchange.js -O /custom/scripts/jd_ck_exchange.js
+    # wget https://gitee.com/hausthy/remote/raw/master/docker/jd_cfd_pearl_ex.js -O /custom/scripts/jd_cfd_pearl_ex.js
+    # wget https://gitee.com/hausthy/remote/raw/master/docker/jd_cfdhbtx.js -O /custom/scripts/jd_cfdhctx.js
+    # wget https://gitee.com/hausthy/remote/raw/master/docker/jd_applecoupons.js -O /custom/scripts/jd_applecoupons.js
     wget https://git.itsapi.top/https://raw.githubusercontent.com/whzsyx/xuescripts/main/jd_fanli_Mod.js -O /custom/scripts/jd_fanli_Mod.js
     wget https://git.itsapi.top/https://raw.githubusercontent.com/whzsyx/xuescripts/main/jd_jddt.js -O /custom/scripts/jd_jddt.js
     wget https://git.itsapi.top/https://raw.githubusercontent.com/whzsyx/xuescripts/main/jd_nzmh.js -O /custom/scripts/jd_nzmh.js
