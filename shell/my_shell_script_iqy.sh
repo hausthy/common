@@ -20,8 +20,10 @@ function main() {
     #开始安装运行需要的python环境
     initPythonEnv
 
-    echo -e "\n#自定义脚本Task" >>${mergedListFile}
+    mkdir -p /custom/
     
+    echo -e "\n#自定义脚本Task" >>${mergedListFile}
+
     ## 下载爱奇艺
     wget https://git.itsapi.top/https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js -O /custom/scripts/iQIYI.js
 
