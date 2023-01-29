@@ -21,7 +21,8 @@ function initPythonEnv() {
 
 #主入口
 function main() {
-
+    mkdir -p /custom/scripts/
+    
     if [ ! -f "/root/nodejs.lock" ]; then
         echo "开始更新nodejs..."
         sed -i 's#dl-cdn.alpinelinux.org#mirrors.aliyun.com#g' /etc/apk/repositories
@@ -41,7 +42,7 @@ function main() {
     #开始安装运行需要的python环境
     # initPythonEnv
 
-    mkdir -p /custom/
+    
 
     echo -e "\n#自定义脚本Task" >>${mergedListFile}
 
