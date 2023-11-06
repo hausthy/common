@@ -47,7 +47,7 @@ function main() {
     echo -e "\n#自定义脚本Task" >>${mergedListFile}
 
     ## 下载爱奇艺
-    wget https://git.itsapi.top/https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js -O /custom/scripts/iQIYI.js
+    wget https://git.azzf.eu.org/https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js -O /custom/scripts/iQIYI.js
 
     if [ $JD_USER_NAME == "hausthy" ]; then
         # initTelethon
